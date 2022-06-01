@@ -1,0 +1,150 @@
+/* Header
+------------------------------------------------------------*/
+// display: flex
+
+.c-header{
+    &__top {
+        background-color: #525355;
+        >.l-container {
+            @include flex();
+            height: 72px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            @include sp {
+                justify-content: space-between;
+            }
+        }
+    }
+    &__logo {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__social {
+        position: absolute;
+        right: 0;
+        @include sp {
+            position: unset;
+        }
+        @include tab {
+            right: 20px;
+        }
+    }
+    &__nav {
+        >.l-container {
+            border-bottom: 1px solid #000;
+            padding: 0;
+            padding-bottom: 20px;
+            padding-top: 38px;
+            @include tab {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        a {
+            color: $textColor;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            transition: 0.3s;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                right: 100%;
+                width: 50%;
+                height: 2px;
+                background: #000;
+                opacity: 0;
+                transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 100%;
+                width: 50%;
+                height: 2px;
+                opacity: 0;
+                background: #000;
+                transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            &:hover::before {
+                right: 0;
+                opacity: 1;
+            }
+            &:hover::after {
+                left: 0;
+                opacity: 1;
+            }
+        }
+        @include sp {
+            display: none;
+        }
+    }
+    &__list {
+        @include flex(stretch, center);
+        position: relative;
+        li {
+            margin-right: 67px;
+            &:first-child {
+                position:absolute;
+                left: 0;
+                margin-right: 0;
+            }
+            &:last-child {
+                position: absolute;
+                right: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+.c-mobile {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+.mobile__menu {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 222px;
+    background-color: $bgColor;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: transform 0.8s;
+    &--close {
+        transform: translateX(0%);
+    }
+    ul {
+       
+        li {
+            margin-bottom: 30px;
+            a {
+                font-size: 3rem;
+                color: $textColor;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.close {
+    text-align: right;
+    position: relative;
+    top: -20px;
+    right: 20px;
+    i {
+        font-size: 30px;
+    }
+}
+/* Main menu
+------------------------------------------------------------*/

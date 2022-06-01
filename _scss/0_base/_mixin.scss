@@ -1,0 +1,30 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+	@media only screen and (max-width: 767px) { @content ; }
+}
+
+@mixin tab {
+	@media only screen and (max-width: 1024px) { @content ; }
+}
+
+// display: flex
+@mixin flex ($align: flex-start, $justify: flex-start, $wrap: nowrap) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+}

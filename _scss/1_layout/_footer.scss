@@ -1,0 +1,180 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    .l-container {
+        padding: 0 20px;
+        @include flex();
+        @include sp {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__top {
+        font-size: 1.2rem;
+        color: $textColor;
+        text-transform: uppercase;
+
+        >.l-container {
+            border-top: 1px solid #000;
+            padding-top: 60px;
+        }
+    }
+
+    &__bot {
+        background-color: $bgColor;
+        padding-top: 30px;
+        padding-bottom: 170px;
+        @include sp {
+            padding-bottom: 100px;
+        }
+        >.l-container {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__left {
+        width: 50%;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__email {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__tel {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__right {
+        p {
+            margin-bottom: 20px;
+        }
+        &--r {
+            text-align: right;
+        }
+    }
+    &__address {
+        p {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: $textColor;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__backtop {
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    &__copyright {
+        text-align: center;
+        p {
+            font-size: 1rem;
+            color: $textColor;
+            text-transform: uppercase;
+        }
+    }
+
+    
+
+    .form__group {
+        position: relative;
+        padding: 15px 0 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #000;
+        outline: 0;
+        font-size: 1.3rem;
+        color: $white;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:placeholder-shown~.form__label {
+            font-size: 1.3rem;
+            cursor: text;
+            top: 20px;
+        }
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: #000;
+    }
+
+    .form__field:focus {
+        ~.form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 1rem;
+            color: $primary;
+            font-weight: 700;
+        }
+
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, $primary, $secondary);
+        border-image-slice: 1;
+    }
+
+    /* reset input */
+    .form__field {
+
+        &:required,
+        &:invalid {
+            box-shadow: none;
+        }
+    }
+    .form {
+        @include flex();
+        justify-content: space-between;
+        @include sp {
+            flex-direction: column;
+        }
+        &__left {
+            width: 45%;
+            @include sp {
+                width: 100%;
+            }
+        }
+        &__right {
+            width: 45%;
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+}
