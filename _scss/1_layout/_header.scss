@@ -3,6 +3,7 @@
 // display: flex
 
 .c-header{
+    overflow-x: hidden;
     &__top {
         background-color: #525355;
         >.l-container {
@@ -110,6 +111,7 @@
     }
 }
 .mobile__menu {
+    display: none;
     padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 222px;
@@ -122,6 +124,9 @@
     right: 0;
     z-index: 99;
     transition: transform 0.8s;
+    @include sp {
+        display: block;
+    }
     &--close {
         transform: translateX(0%);
     }

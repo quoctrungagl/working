@@ -32,3 +32,18 @@ function mobileMenu() {
     }
 }
 mobileMenu();
+
+function fullScreen() {
+    var screen = document.querySelector('.c-details__fullscreen');
+    var imgLink = document.querySelector('.c-details__main img').src;
+    var closeImg = document.querySelector('#fullscreen span');
+    var fullScreen = document.querySelector('#fullscreen');
+    screen.onclick = function () {
+        fullScreen.style.display = 'block';
+        fullScreen.style.backgroundImage = 'url(' + imgLink + ')';
+    }
+    closeImg.onclick = function () {
+        fullScreen.style.display = 'none';
+    }
+}
+fullScreen();

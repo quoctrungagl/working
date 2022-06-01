@@ -1,0 +1,134 @@
+.c-studio {
+    >.l-container {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 76px;
+        @include tab {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include sp {
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &__list {
+        @include flex(center, space-between, wrap);
+    }
+    &__item {
+        text-align: center;
+        cursor: pointer;
+        width: calc((100% - 40px) / 2);
+        margin-bottom: 70px;
+        @include sp {
+            width: 100%;
+        }
+        &:hover .c-studio__overlay{
+            opacity: 1;
+            transition: 0.3s linear;
+        }
+        &:hover .c-studio__content{
+            background-color: #525355;
+            color: #fff;
+            transition: 0.3s linear;
+            p {
+                color: #fff;
+            }
+        }
+        &:hover .c-studio__number {
+            span {
+                color: $textColor;
+            }
+        }
+        &:hover .c-studio__btn {
+            span {
+                color: #fff;
+                transition: 0.3s linear;
+                i {
+                    color: $bgColor;
+                }
+            }
+        }
+    }
+    &__content {
+        background-color: #fff;
+        @include flex(center, space-between);
+        height: 115px;
+        width: 99%;
+        @include sp {
+            height: 90px;
+        }
+    }
+    &__number {
+        background-color: $bgColor;
+        height: inherit;
+        text-align: center;
+        @include flex(center, center);
+        flex-direction: column;
+        padding: 0 38px;
+        @include sp {
+            padding: 0 15px;
+        }
+        span {
+            &:first-child {
+                font-size: 1.1rem;
+                color: $textColor;
+            }
+            &:last-child {
+                font-size: 6rem;
+                font-weight: bold;
+                line-height: 1;
+                @include sp {
+                    font-size: 3.8rem;
+                }
+            }
+        }
+    }
+    &__desc {
+        text-align: start;
+        p {
+            color: $textColor;
+            font-size: 1.2rem;
+            line-height: 2;
+            &:first-child {
+                text-transform: uppercase;
+                
+            }
+        }
+    }
+    &__btn {
+        @include flex(center, center);
+        flex-direction: column;
+        padding-right: 30px;
+        @include sp {
+            padding-right: 0;
+        }
+        span {
+            color: $textColor;
+            &:first-child {
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__img {
+        position: relative;
+        z-index: -1;
+    }
+    &__overlay {
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        width: 99%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        @include sp {
+            width: 100%;
+        }
+    }
+}

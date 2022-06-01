@@ -1,0 +1,113 @@
+.c-details {
+    >.l-container {
+        padding-left: 0;
+        padding-right: 0;
+        @include tab {
+            padding: 0 15px;
+        }
+    }
+    &__top {
+        @include flex();
+        margin-top: 55px;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+    &__name {
+        flex: 3;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: $textColor;
+        font-weight: 400;
+        @include sp {
+            flex: 1;
+        }
+    }
+    &__fullscreen {
+        cursor: pointer;
+        flex: 1;
+        @include flex(center);
+        p {
+            margin-right: 20px;
+            font-size: 1.4rem;
+            color: $textColor;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+    &__back {
+        flex: 1;
+        text-align: end;
+        @include flex(center, flex-end);
+        p {
+            margin-right: 25px;
+            font-size: 1.4rem;
+            color: $textColor;
+        }
+    }
+    &__main {
+        text-align: center;
+    }
+    &__bot {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        @include flex(stretch, space-between);
+        h3 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: $textColor;
+        }
+        p {
+            font-size: 1.1rem;
+            color: $textColor;
+            line-height: 2;
+            
+        }
+
+        @include sp {
+            flex-direction: column;
+        }
+    }
+    &__client {
+        @include sp {
+            order: 1;
+            margin-bottom: 40px;
+        }
+    }
+    &__desc {
+        @include sp {
+            order: 2;
+            margin-bottom: 40px;
+        }
+    }
+    &__about {
+        @include sp {
+            order: 3;
+        }
+    }
+}
+#fullscreen {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 85% 85%;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    span {
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        top: 5%;
+        right: -42.5%;
+        cursor: pointer;
+    }
+}
