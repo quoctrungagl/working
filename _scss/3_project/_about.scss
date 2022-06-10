@@ -2,6 +2,33 @@
 Css of home page
 ------------------------------------------------------------*/
 .p-about{
-    line-height: 2;
-	
+    
+}
+.c-about {
+    background-color: #282828;
+    color: #e4e4e4;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    h2 {
+        color: $bgColor;
+        font-size: 3.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        letter-spacing: 11px;
+        @include sp {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+    }
+    &__desc {
+        font-size: 1.8rem;
+        margin-bottom: 57px;
+        line-height: 2;
+        padding: 0 20px;
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
 }

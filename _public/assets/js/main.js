@@ -46,4 +46,18 @@ function fullScreen() {
         fullScreen.style.display = 'none';
     }
 }
-fullScreen();
+// fullScreen();
+
+// get location
+
+function getLocation () {
+    var href = window.location.href;
+
+    if(href.indexOf('contact') != -1) {
+        document.querySelector('.c-footer__top').style.display = 'none';
+    }
+    else {
+        console.log('No');
+    }
+}
+getLocation();

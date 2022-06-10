@@ -1,0 +1,332 @@
+.p-studio-details {
+    >.l-container {
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 1px solid #000;
+    }
+}
+
+.c-studio-details {
+
+    &__top {
+        padding: 32px 0;
+        @include sp {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__back {
+        text-align: end;
+        @include flex(center, flex-end);
+
+        p {
+            margin-right: 25px;
+            font-size: 1.4rem;
+            color: $textColor;
+        }
+    }
+
+    &__bot {
+        @include flex(center, space-between);
+        padding: 0 20px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid;
+        @include sp {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+
+    &__number {
+        background-color: $bgColor;
+        height: 115px;
+        // flex: 1;
+        text-align: center;
+        @include flex(center, center);
+        flex-direction: column;
+        padding: 0 38px;
+
+        @include sp {
+            padding: 0 15px;
+            width: 100px;
+            height: 100px;
+        }
+
+        span {
+            &:first-child {
+                font-size: 1.1rem;
+                color: $textColor;
+                text-transform: uppercase;
+            }
+
+            &:last-child {
+                font-size: 6rem;
+                font-weight: bold;
+                line-height: 1;
+
+                @include sp {
+                    font-size: 3.8rem;
+                }
+            }
+        }
+    }
+
+    &__desc {
+        p {
+            font-size: 1.4rem;
+            color: $textColor;
+
+            &:first-child {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+        }
+        @include sp () {
+            padding-right: 50px;
+        }
+    }
+
+    &__download {
+        @include flex();
+
+        p {
+            font-size: 1.4rem;
+            color: $textColor;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__fullscreen {
+        cursor: pointer;
+        @include flex(center);
+
+        p {
+            margin-right: 20px;
+            font-size: 1.4rem;
+            color: $textColor;
+        }
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__slide {
+        @include flex(center);
+        font-size: 1.4rem;
+
+        i {
+            margin: 0 10px;
+        }
+
+        p {
+
+            padding: 0 15px;
+        }
+
+        .slide-prev {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 15%;
+                height: 1px;
+                right: -10%;
+                top: 50%;
+                background-color: #000;
+                transform: rotate(90deg);
+            }
+        }
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__content {
+        @include flex(stretch);
+        padding: 0 20px;
+        padding-top: 30px;
+        margin-bottom: 65px;
+        @include sp {
+            flex-direction: column;
+            padding-top: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__pricing {
+        margin-right: 50px;
+        @include sp {
+            margin-right: 0;
+        }
+        h2 {
+            color: #39382f;
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #2d2e2e;
+            margin-bottom: 24px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        table,
+        tr {
+            border: 1px solid #000;
+            border-bottom: 1px solid #000;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 1.4rem;
+            color: $textColor;
+            &:first-child {
+                text-align: start;
+                padding-left: 60px;
+                @include sp {
+                    padding-left: 10px;
+                }
+            }
+            &:last-child {
+                text-align: end;
+                padding-right: 20px;
+                @include sp {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    &__floorplan {
+
+        h2 {
+            color: #39382f;
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin-bottom: 65px;
+            @include sp {
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__plan {
+        cursor: pointer;
+        position: relative;
+        @include sp {
+            text-align: -webkit-center;
+        }
+        img {
+            border: 5px solid;
+            border-block-start-color: #dc0a37;
+            border-block-end-color: #29be7a;
+            border-right-color: #29be7a;
+            
+            
+        }
+        &:hover .c-studio-details__hover {
+            opacity: 1;
+            
+        }
+        &:hover img {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+    &__clientarea {
+        background-color: $bgColor;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 130px;
+        height: 108px;
+        @include flex(center,center);
+        flex-direction: column;
+        p{
+            font-size: 1.2rem;
+            &:first-child {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__hover {
+        position: absolute;
+        top: 65%;
+        left: 40%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s linear;
+        p {
+            color: #fff;
+            font-size: 1.2rem;
+            &:first-child {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__specs {
+        padding: 0 20px;
+        
+        h2 {
+            color: #39382f;
+            font-size: 3.2rem;
+            
+        }
+    }
+    &__detail {
+        @include flex();
+        margin-bottom: 65px;
+        @include sp {
+            flex-direction: column;
+        }
+    }
+    &__left {
+        width: 50%;
+        text-align: left;
+        @include sp {
+            width: 100%;
+        }
+        p {
+            font-size: 1.4rem;
+            color: $textColor;
+            line-height: 3;
+        }
+    }
+    &__right {
+        width: 50%;
+        text-align: left;
+        @include sp {
+            width: 100%;
+        }
+        p {
+            font-size: 1.4rem;
+            color: $textColor;
+            line-height: 3;
+        }
+    }
+    &__more {
+        display: block;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}

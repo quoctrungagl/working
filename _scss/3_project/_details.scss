@@ -1,3 +1,9 @@
+.p-details {
+    >.l-container {
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+    }
+}
 .c-details {
     >.l-container {
         padding-left: 0;
@@ -63,7 +69,7 @@
             font-size: 1.1rem;
             color: $textColor;
             line-height: 2;
-            
+               
         }
 
         @include sp {

@@ -28,3 +28,15 @@
 	justify-content: $justify;
 	flex-wrap: $wrap;
 }
+.pc {
+ 	display: block;
+	@include sp {
+		display: none;
+	}
+}
+.sp {
+	display: none;
+	@include sp {
+		display: block;
+	}
+}

@@ -1,6 +1,12 @@
 /*------------------------------------------------------------
 Css of home page
 ------------------------------------------------------------*/
+.p-top {
+	>.l-container {
+		border-bottom: 1px solid #000;
+		border-top: 1px solid #000;
+	}
+}
 
 .c-intro {
 	padding: 60px 0;
