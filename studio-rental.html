@@ -1,0 +1,119 @@
+<%- include('_layouts/layout', { title: 'Studio rental page' }); -%>
+    <!-- @content -->
+    <main class="p-rental">
+        <section class="c-rental">
+            <div class="l-container">
+                <div class="c-rental__left">
+                    <div class="c-rental__studio">
+                        <div class="c-rental__number">
+                            <span>studio</span>
+                            <span>01</span>
+                        </div>
+                        
+                        <div class="c-rental__desc">
+                            <h2>Rental</h2>
+                            <p>dimensions</p>
+                            <p>87ft × 92ft × 31ft </p>
+                            <p>26.52m × 28.04m × 9.45m)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-rental__right">
+                    <div class="c-rental__book">
+                        <form action="">
+                            <div class="c-rental__company">
+                                <h2>Company details</h2>
+                                <div class="form-1">
+                                    <div class="form__left">
+                                        <div class="form__group">
+                                            <input type="text" class="form__field" name="company" id="company">
+                                            <label for="company" class="form__label">Company Name:<span>*</span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <input type="text" class="form__field" name="contact" id="contact">
+                                            <label for="contact" class="form__label">Contact Name:<span>*</span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <input type="tel" class="form__field" name="phone" id="phone">
+                                            <label for="phone" class="form__label">Phone:<span>*</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form__right">
+                                        <div class="form__group">
+                                            <input type="email" class="form__field" name="email" id="email">
+                                            <label for="email" class="form__label">Email:<span>*</span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <input type="text" class="form__field" name="account" id="account">
+                                            <label for="account" class="form__label">Account payable
+                                                contact:<span>*</span></label>
+                                        </div>
+                                        <div class="form__group">
+                                            <textarea name="address" id="address" cols="30" rows="8"></textarea>
+                                            <label for="address" class="form__label">Company
+                                                Address:<span>*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-rental__booking">
+                                <h2>Booking details</h2>
+                                <div class="form__group ">
+                                    <div class="form__flex">
+                                        <input type="button" class="form__field active" name="studio" id="studio" value="01">
+                                        <input type="button" class="form__field" name="studio" id="studio" value="02">
+                                        <input type="button" class="form__field" name="studio" id="studio" value="03">
+                                        <input type="button" class="form__field" name="studio" id="studio" value="04">
+                                    </div>
+                                    <label for="studio" class="form__label">Studio:<span>*</span></label>
+                                </div>
+                                <div class="group__flex">
+                                    <div class="form__group">
+                                        <textarea name="catering" id="catering" cols="30" rows="8"></textarea>
+                                        <label for="catering" class="form__label">Catering requirements:<span>*</span></label>
+                                    </div>
+                                    <div class="form__group">
+                                        <textarea name="lighting" id="lighting" cols="30" rows="8"></textarea>
+                                        <label for="lighting" class="form__label">Lighting requirements:<span>*</span></label>
+                                    </div>
+                                </div>
+                                <p class="form-note">Please note: All lighting hire to go through Gbox Studios</p>
+                                <div class="form__group flex">
+                                    <div class="form__flex">
+                                        <input type="date" class="form__field" name="toDate" id="toDate">
+                                        <span>
+                                            <i class="fas fa-chevron-right pc"></i>
+                                            <i class="fas fa-chevron-down sp"></i>
+                                        </span>
+                                        <input type="date" class="form__field" name="formDate" id="formDate">
+                                    </div>
+                                    <label for="date" class="form__label">Booking Duration:<span>*</span></label>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__field" name="project" id="project">
+                                    <label for="project" class="form__label">Project Reference:<span>*</span></label>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__field" name="about" id="about">
+                                    <label for="about" class="form__label">Where did you hear about us:<span>*</span></label>
+                                </div>
+                            </div>
+                            <div class="u-book">
+                                <a href="" class="u-book__btn u-book__btn--color">
+                                    <p>submit
+                                    </p>
+                                </a>
+                                <p class="u-book__title">
+                                    By submitting this form I agree to 
+                                    <br>
+                                    <span>GBox Studio’s</span> Terms & Conditions.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- @@content -->
