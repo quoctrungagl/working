@@ -32,6 +32,12 @@ btn
         color: $textColor;
         margin-bottom: 20px;
     }
+    &--order {
+        @include sp {
+            order: 2;
+            margin-top: 70px;
+        }
+    }
 }
 .c-send {
     background-color: #000;
@@ -68,6 +74,7 @@ btn
         &--color {
             background-color: #525355;
             color: $bgColor;
+            
         }
     }
     &__title {
@@ -75,6 +82,25 @@ btn
         span {
             font-weight: bold;
         }
+    }
+    &__ps {
+        position: absolute;
+        right: 0;
+        @include sp {
+            position: unset;
+            flex-direction: column;
+            order: 1;
+            align-items: center;
+        }
+    }
+    &__text {
+        text-align: end;
+        margin-right: 20px;
+        @include sp {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
     }
     &--center {
         @include flex(center, center);

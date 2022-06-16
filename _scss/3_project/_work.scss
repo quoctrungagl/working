@@ -8,3 +8,10 @@
         padding-top: 50px;
     }
 }
+.c-product__bottom {
+    @include flex(stretch, center);
+    position: relative;
+    @include sp {
+        flex-direction: column;
+    }
+}
